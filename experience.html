@@ -6,8 +6,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
+    <link rel="stylesheet" type="text/css" href="/global.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-
+    <script   src="https://code.jquery.com/jquery-3.4.1.js"   integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="   crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+      window.onload = function(){
+        console.log($.get(navbar.html))
+        $.get("navbar.html", function(data) {
+          $("#navbar").html(data);
+              $('.navbar-nav').find('li:nth-child(3)').addClass('active')
+        })
+      }
+    </script>
+    <script src="/experience.js"></script>
     <title>About Me</title>
   </head>
   <body>
@@ -16,67 +29,63 @@
   	</div>
     
     <div class = "container">
-      <div class = "row">
-        <div class = "col-12">
-          <h1 class = "text-left">Web Development</h1>
-        </div>
-      </div>
-      <div class = "row">
-        <div class = "col-md-9">
-          <p> I'm currently working on developimg skills in web development, an example of which is this website. This website is developed using HTML5 and Bootstrap, with PHP and Javascript planned as well. All code was developed by me.</p>
-        </div>
-        <div class = "col">
-          <img src="profilepic.jpg" alt="Profile Pic" height ="150" width="150">
-        </div>
-      </div>
-      <div class = "row">
-        <div class = "col-12">
-          <h1 class = "text-left">Data Analysis</h1>
-        </div>
-      </div>
-      <div class = "row">
-        <div class = "col">
-          <img src="profilepic.jpg" alt="Profile Pic" height ="150" width="150">
-        </div>
-        <div class = "col-md-9">
-          <p>I have experience with data analysis and visualization from my work at Arup and previous work. For example, I have experience downloading weather data from NOAA, automatically cleaning it, and summarizing it into values and charts for engineering judgements. I primarily work in Python Pandas for this, but have previously also used R.</p>
-      </div>
-      <div class = "row">
-        <div class = "col-12">
-          <h1 class = "text-left">Vibration Analysis</h1>
-        </div>
-      </div>
-      <div class = "row">
-        <div class = "col-md-9">
-          <p>At Arup, I have used accelerometers to measure both footfall and rail vibrations. Although these vibrations are rarely a safety problem, vibrations can be a source of disturbance both to people and to senstive equipment. By measuring the current or expected vibrations, we analyze the causes of the vibration and recommend remediation or design measures.</p>
-        </div>
-        <div class = "col">
-          <img src="profilepic.jpg" alt="Profile Pic" height ="150" width="150">
-        </div>
-      </div>
-      <div class = "row">
-        <div class = "col-12">
-          <h1 class = "text-left">Database Development</h1>
-        </div>
-      </div>
-      <div class = "row">
-        <div class = "col">
-          <img src="profilepic.jpg" alt="Profile Pic" height ="150" width="150">
-        </div>
-        <div class = "col-md-9">
-          <p>In one of my internships, I pitched and created an MS Access database to store information on road improvements. This entailed designing the database UI, designing data entry forms, designing data retrieval pages, and designing reports that would summarise the data, along with all related SQL queries. At the end of the internship, I ensured the code was well-documented and handed the project off to a coworker to maintain for the client.</p>
+      <p>Here you can see my experience organized by type and by position. For a more typical summary of my experience, please refer to my Resume (linked in the menu bar)</p>
+      <button onclick="show_type()">Experience by Type</button>
+      <button onclick="show_position()">Experience by Position</button>
+      <div id="bytype">
+      	<h2>Web Development</h2>
+      	<p>In my Junior year of college, I took a class on web development with Python. 
+      	After an initial project creating a desktop app, I created a task manager web app 
+      	with both Kanban and tabular views using Django and JQuery. The user could add and edit tasks and categories.
+      	The tasks were able to be color coded by category. SQLite was used for the backend.
+      	I chose the project of the task manager myself and added the Kanban view for complexity,
+      	as I wanted to create a task manager that I would actually want to use.</p>
+      	<p>Prior to this, I created a static website using a bootstrap template to showcase
+      	a green building I was studying.</p>
+      	
+      	<h2>Data Analysis</h2>
+      	<p>I have experience with data analysis and visualization from my work at Arup and 
+      	previous work. For example, I have experience downloading weather data from NOAA, 
+      	automatically cleaning it, and summarizing it into values and charts for engineering 
+      	judgements. I primarily work in Python Pandas for this, but have previously also used R.</p>
+      	
+      	<h2>Database Development</h2>
+      	<p>In one of my internships, I pitched and created an MS Access database to store 
+      	information on road improvements. This entailed designing the database UI, designing 
+      	data entry forms, designing data retrieval pages, and designing reports that would 
+      	summarise the data, along with all related SQL queries. At the end of the internship, 
+      	I ensured the code was well-documented and handed the project off to a coworker to 
+      	maintain for the client.</p>
       </div>
       
-      <div class = "row">
-        <div class = "col-12">
-          <h1 class = "text-center">Resume</h1>
-        </div>
-      </div>
-      <div class = "row">
-        <div class = "col-12">
-          <iframe src="Resume_Clara_Nelson.pdf" width ="100%" height = "1200">
-          </iframe>
-        </div>
+      <div id="byposition">
+      <h2><b>ARUP</b> Advanced Technology and Research Graduate Analyst</h2>
+      <ul>
+      	<li>Decreased runtime of existing data processing tool by __ </li>
+      	<li>Analyzed weather data with Pandas in Python to determine design parameters and analyze building behavior</li>
+      	<li>Taught engineers basic Python and programming skills as Python Club TA</li>
+      </ul>
+
+      <h2><b>Carnegie Mellon Civil Engineering Department</b> CEE Graduate Research Assistant</h2>
+      <ul>
+        <li>Measured floor structural vibrations and performed signal analysis using MATLAB</li>
+        <li>Researched and designed 21x7ft floor system for footstep vibration testing</li>
+      </ul>
+
+      <h2><b>TranSystems</b> Summer Intern</h2>
+      <ul>
+        <li>Pitched new Microsoft Access database to manager to replace old system of Excel spreadsheets</li>
+        <li>Assessed internal and external user needs and customized UI for key use cases</li>
+        <li>Documented structure of database code and instructions for use</li>
+        <li>Trained another engineer for ongoing support of database after end of internship</li>
+      </ul>
+
+      <h2><b>Crown Castle Inc</b> Construction Egnineering Intern/Co-op</h2>
+      <ul>
+        <li>Developed new Microsoft Access database and streamlined existing databases using self-taught VBA</li>
+        <li>Proofread documentation and standards</li>
+        <li>Reviewed constractor reports for compliance with company standards</li>
+      </ul>
       </div>
     </div>
 
@@ -84,17 +93,6 @@
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script   src="https://code.jquery.com/jquery-3.4.1.js"   integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="   crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-	<script type="text/javascript">
-  		window.onload = function(){
-  			console.log($.get(navbar.html))
-  			$.get("navbar.html", function(data) {
-  				$("#navbar").html(data);
-        	  	$('.navbar-nav').find('li:nth-child(3)').addClass('active')
-  			})
-  		}
-	</script>
+    
   </body>
 </html>
