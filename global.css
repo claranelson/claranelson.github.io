@@ -1,3 +1,4 @@
-/*#byposition{
-	display:none;
-}*/
+.img-fluid-profile {
+	max-width: 75%;
+	height:auto;
+}
