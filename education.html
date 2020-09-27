@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <title>Education</title>
+  </head>
+  <body>
+    <div class="container-fluid" id="navbar">
+    <!-- Here goes the navbar, loaded by javascript!-->
+    </div>
+    <section>
+      <div class = "container">
+        <h1 class = "text-center my-5">Education</h1>
+        <h4><b>Carnegie Mellon University</b> Masters in Civil Engineering</h4>
+        <ul>
+          <li>Focus Area: Advanced Infrastructure Systems (focusing on intelligent buildings, including coursework on control systems, sensors, programming, and databases)</li>
+          <li>GPA: 4.0</li>
+          <li>Relevant Coursework:
+            <ul>
+              <li><b>Data Structures and Algorithms:</b> course 15-122 from the computer science school at CMU. In this course I learned data structures such as linked lists and algorithms such as quicksort. I also learned how to write code in C and the skills necessary, like how to write provably correct code.</li>
+              <li><b>Data Mining and Machine Learning for Smart Structures:</b> I learned how to apply machine learning to sensor data to answer research questions. Our final project was creating a system that could detect bad posture based on pressure readings from a keyboard wrist rest.</li>
+              <li><b>Data Analytics:</b> An introduction to data analytics using R, Tableau, and Excel.</li>
+            </ul>
+          </li>
+        </ul>
+        
+
+        <h4 class = "mt-4"><b>Carnegie Mellon University</b> Bachelors of Science in Civil Engineering</h4>
+        <ul>
+          <li>Minor in Philosophy</li>
+          <li>GPA: 3.92</li>
+          <li>Relevant Coursework:
+            <ul>
+              <li>Python prototyping and web development for infrastructure</li>
+              <li>Data Acquisition</li>
+              <li>Data Management</li>
+              <li>Building Controls and Diagnostics</li>
+              <li>Principles of Computing</li>
+            </ul>
+          </li>
+        </ul>
+
+      </div>
+    </section>
+    
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script   src="https://code.jquery.com/jquery-3.4.1.js"   integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="   crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+      window.onload = function(){
+        console.log($.get(navbar.html))
+        $.get("navbar.html", function(data) {
+          $("#navbar").html(data);
+              $('.navbar-nav').find('li:nth-child(4)').addClass('active')
+        })
+      }
+  </script>
+  
+  </body>
+</html>
