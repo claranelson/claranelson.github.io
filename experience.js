@@ -3,7 +3,7 @@ function load_page() {
 	// console.log($.get(navbar.html))
     $.get("navbar.html", function(data) {
     	$("#navbar").html(data);
-    	$('.navbar-nav').find('li:nth-child(3)').addClass('active');
+    	$('.navbar-nav').find('li:nth-child(2)').addClass('active');
 	})
 }
 
