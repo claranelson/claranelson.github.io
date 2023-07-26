@@ -1,5 +1,5 @@
 function load_page() {
-	show_type();
+	show_position();
 	// console.log($.get(navbar.html))
     $.get("navbar.html", function(data) {
     	$("#navbar").html(data);
