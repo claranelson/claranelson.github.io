@@ -1,46 +1,25 @@
-import { Link } from "react-router-dom"
-const Navbar = () => {
+import Nav from 'react-bootstrap/Nav';
+import Navbar from 'react-bootstrap/Navbar';
+import Container from 'react-bootstrap/Container';
+const CustomNavbar = () => {
   return (
-    <div className="navbar bg-body-secondary">
-      <Link className="nav-link" to="/">Home</Link>
-      <Link className="nav-link" to="/aboutme">About Me</Link>
-      <Link className="nav-link" to="/experience">Experience</Link>
-      <Link className="nav-link" to="/education">Experience</Link>
-    </div>
+    <Navbar expand="lg" className="bg-light">
+      <Container>
+        <Navbar.Brand href="#home">Clara Nelson</Navbar.Brand>
+        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar.Collapse id="menuItems">
+          <Nav className="navbar-nav">
+              <Nav.Link className="nav-link nav-item" to="/">Home</Nav.Link>
+              <Nav.Link className="nav-link" to="/experience">Experience</Nav.Link>
+              <Nav.Link className="nav-link" to="/education">Education</Nav.Link>
+              <Nav.Link className="nav-link" to="/aboutme">About Me</Nav.Link>
+              <Nav.Link className="nav-link" to="./Clara_Nelson_Resume.pdf">Resume</Nav.Link>
+          </Nav>
+        </Navbar.Collapse>
+      </Container>
+
+    </Navbar>
+
   )
 }
-export default Navbar;
-
-
-// <nav class ="navbar navbar-expand-lg navbar-light bg-light">
-// 	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-// 	<span class="navbar-toggler-icon"></span>
-// 	</button>
-// 	<div class="collapse navbar-collapse" id="navbarSupportedContent">
-// 		<ul class = "navbar-nav mr-auto">
-// 			<li class="nav-item">
-// 				<a class="nav-link" href="index.html">Home</a>
-// 			</li>
-// 		  <li class = "nav-item">
-// 			<a class = "nav-link" href = "experience.html">Experience</a>
-// 		  </li>
-// 		  <li class = "nav-item">
-// 			<a class = "nav-link" href = "education.html">Education</a>
-// 		  </li>
-		  
-// 		  <li class = "nav-item">
-// 			<a class = "nav-link" href = "contactme.html">Contact Me</a>
-// 		  </li>
-// 		  <li class = "nav-item">
-// 		  	<a class = "nav-link" href = "Clara_Nelson_Resume.pdf" target="_blank">Resume</a>
-// 		  </li>
-// 		  <li class = "nav-item">
-// 		  	<a class = "nav-link" href = "https://github.com/claranelson" target="_blank">My Github</a>
-// 		  </li>
-// <!-- 		  <li class = "nav-item">
-// 			<a class = "nav-link" href = "aboutme.html">About Me</a>
-// 		  </li> -->
-		  
-// 		</ul>
-// 	</div>
-// </nav>
+export default CustomNavbar;
