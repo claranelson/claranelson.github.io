@@ -1,9 +1,9 @@
 import './App.css';
-import { Routes, Route } from "react-router-dom";
-import Education from "./routes/Education";
 import Experience from "./routes/Experience";
+import Education from "./routes/Education";
 import Home from "./routes/Home";
-import Navbar from './components/Navbar';
+import Layout from "./components/Layout";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App() {
   return (
@@ -15,12 +15,16 @@ function App() {
       <script
         src="https://cdn.jsdelivr.net/npm/react-bootstrap@next/dist/react-bootstrap.min.js"
         crossorigin></script>
-      <Navbar />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/education" element={<Education />} />
-        <Route path="/experience" element={<Experience />} />
-      </Routes>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Layout />}>
+            <Route index element={<Home />} />
+            <Route path="education" element={<Education />} />
+            <Route path="experience" element={<Experience />} />
+            {/* <Route path="*" element={<NoPage />} /> */}
+          </Route>
+        </Routes>
+      </BrowserRouter>
     </>
   );
 }

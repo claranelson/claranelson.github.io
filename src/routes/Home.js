@@ -1,10 +1,12 @@
 import Card from '../components/Card';
 import CardStack from '../components/CardStack';
 import Container from 'react-bootstrap/Container';
+import ProfilePic from '../resources/profilepic.jpg';
 
 const Home = () => {
     return (<Container>
-        <h1 className="text-center">Clara Nelson — Senior Software Engineer</h1>
+        <h1>Clara Nelson — Senior Software Engineer</h1>
+        <div className="row">
         <CardStack className="col-lg-8">
             <Card title="Background">
                 <p>I'm a Senior Software Engineer at Ordergroove, where I work on the Merchant Growth team on tools to help  merchants manage their programs and customers manage their subscriptions. This work includes the merchant portal, the subscription offer widgets that appear on product pages for customers to subscribe, and the customer interface for managing their subscriptions. My work on these tools primarily involves React, Redux, Less, Python, and Go. Previously at Ordergroove, I also worked on the Shopify integration in Node.js.</p>
@@ -26,8 +28,10 @@ const Home = () => {
             </Card>
         </CardStack>
         <div className="col-lg-4">
-            <img src="./profilepic.jpg" alt="Profile Picture" className="img-fluid rounded-lg" />
+            <img src={ProfilePic} alt="Profile Pic" className="img-fluid rounded" />
         </div>
+        </div>
+
     </Container>);
 }
 

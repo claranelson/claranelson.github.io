@@ -39,4 +39,4 @@ const Education = () => {
     </Container>);
 }
 
-export default Education
+export default Education;
