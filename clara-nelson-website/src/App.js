@@ -1,6 +1,5 @@
 import './App.css';
 import { Routes, Route } from "react-router-dom";
-import AboutMe from "./routes/AboutMe";
 import Education from "./routes/Education";
 import Experience from "./routes/Experience";
 import Home from "./routes/Home";
@@ -19,7 +18,6 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/aboutme" element={<AboutMe />} />
         <Route path="/education" element={<Education />} />
         <Route path="/experience" element={<Experience />} />
       </Routes>
