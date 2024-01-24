@@ -4,17 +4,7 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import './styles/base.scss';
-import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-// const router = createBrowserRouter(
-//   createRoutesFromElements(
-//     <Route path="/" element={<App />}>
-//         <Route path="education" element={<Education />} exact />
-//         <Route path="experience" element={<Experience />} exact />
-//         <Route path="/" element={<Home />} />
-//     </Route>
-//   )
-// );
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(<App />);
