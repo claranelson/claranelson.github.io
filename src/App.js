@@ -2,7 +2,7 @@ import './App.css';
 import Experience from "./routes/Experience";
 import Education from "./routes/Education";
 import Home from "./routes/Home";
-import Layout from "./components/Layout";
+import Navbar from "./components/Navbar";
 import { HashRouter, Routes, Route } from "react-router-dom";
 
 function App() {
@@ -16,7 +16,7 @@ function App() {
         <script
           src="https://cdn.jsdelivr.net/npm/react-bootstrap@next/dist/react-bootstrap.min.js"
           crossorigin></script>
-        <Layout />
+        <Navbar />
         <Routes>
           <Route index element={<Home />} />
           <Route path="education" element={<Education />} />

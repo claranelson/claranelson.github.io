@@ -3,7 +3,7 @@ import Navbar from 'react-bootstrap/Navbar';
 import Container from 'react-bootstrap/Container';
 import Resume from '../resources/Clara_Nelson_Resume.pdf';
 
-const Layout = () => {
+const CustomNavbar = () => {
   return (
     <>
       <Navbar expand="lg" className="bg-light mb-3">
@@ -26,4 +26,4 @@ const Layout = () => {
 
   )
 }
-export default Layout;
+export default CustomNavbar;
